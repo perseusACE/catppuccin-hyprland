@@ -2,7 +2,6 @@ brave-bin
 cava
 oh-my-posh
 phinger-cursors
-rustdesk
 spotify
 vesktop
 visual-studio-code-bin
