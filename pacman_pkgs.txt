@@ -17,6 +17,7 @@ kwalletmanager
 libreoffice-still
 linux
 linux-firmware
+lsb-release
 nano
 neofetch
 networkmanager
