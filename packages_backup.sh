@@ -7,3 +7,10 @@ pacman -Qqen > pacman_pkgs.txt
 pacman -Qqem > aur_pkgs.txt
 
 echo "Done..."
+echo "Commiting..."
+
+git add .
+git commit -m "updated packages"
+git push origin main
+
+echo "Commited and pushed to remote..."
