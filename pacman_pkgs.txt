@@ -1,6 +1,8 @@
+arch-install-scripts
 ark
 base
 base-devel
+bitwarden
 blueman
 bluez-utils
 dolphin
@@ -10,9 +12,12 @@ git
 github-cli
 gparted
 grub
+hwinfo
+imagemagick
 kate
 kitty
 konsole
+kvantum
 kwalletmanager
 libreoffice-still
 linux
@@ -25,7 +30,9 @@ papirus-icon-theme
 plasma-desktop
 plasma-nm
 plasma-pa
+plasma-systemmonitor
 sddm
 sddm-kcm
 sof-firmware
 timeshift
+xorg-xrandr

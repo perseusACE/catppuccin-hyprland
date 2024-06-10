@@ -3,6 +3,7 @@ cava
 oh-my-posh
 phinger-cursors
 spotify
+unetbootin
 vesktop
 visual-studio-code-bin
 yay
