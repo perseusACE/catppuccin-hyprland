@@ -22,6 +22,7 @@ ufw default allow outgoing
 ufw default deny incoming
 
 ufw allow 22/tcp
+ufw status
 
 #configure kitty
 echo "configuring kitty..."

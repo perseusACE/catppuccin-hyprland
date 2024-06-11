@@ -14,6 +14,7 @@ gparted
 grub
 hwinfo
 imagemagick
+inetutils
 kate
 kitty
 konsole
@@ -32,6 +33,7 @@ plasma-desktop
 plasma-nm
 plasma-pa
 plasma-systemmonitor
+putty
 sddm
 sddm-kcm
 sof-firmware
