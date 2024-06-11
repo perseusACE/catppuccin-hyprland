@@ -26,6 +26,7 @@ lsb-release
 nano
 neofetch
 networkmanager
+openssh
 papirus-icon-theme
 plasma-desktop
 plasma-nm
@@ -35,4 +36,5 @@ sddm
 sddm-kcm
 sof-firmware
 timeshift
+ufw
 xorg-xrandr
