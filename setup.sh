@@ -23,4 +23,8 @@ ufw default deny incoming
 
 ufw allow 22/tcp
 
+#configure kitty
+echo "configuring kitty..."
+cp .bashrc ~/
+
 echo "done!"
