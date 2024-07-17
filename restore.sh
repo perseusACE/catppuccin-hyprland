@@ -28,4 +28,11 @@ ufw status
 echo "configuring kitty..."
 cp .bashrc ~/
 
-echo "done!"
+#additional startup services
+echo "adding power profiles service"
+sudo systemctl enable power-profiles-daemon.service
+echo "adding timeshift service"
+sudo systemctl enable --now cronie
+
+echo "done! rebooting..."
+sudo reboot
