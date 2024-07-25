@@ -18,7 +18,6 @@ inetutils
 kate
 kitty
 konsole
-kvantum
 kwalletmanager
 libreoffice-still
 linux
@@ -38,6 +37,8 @@ putty
 sddm
 sddm-kcm
 sof-firmware
+starship
 timeshift
+ttf-space-mono-nerd
 ufw
 xorg-xrandr

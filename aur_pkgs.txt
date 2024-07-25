@@ -3,6 +3,7 @@ cava
 oh-my-posh
 phinger-cursors
 spotify
+ttf-work-sans
 unetbootin
 vesktop
 visual-studio-code-bin
