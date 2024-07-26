@@ -13,6 +13,7 @@ github-cli
 gparted
 grub
 hwinfo
+hyprland
 imagemagick
 inetutils
 kate

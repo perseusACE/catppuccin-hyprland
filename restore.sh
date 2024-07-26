@@ -24,10 +24,6 @@ ufw default deny incoming
 ufw allow 22/tcp
 ufw status
 
-#configure kitty
-echo "configuring kitty..."
-cp .bashrc ~/
-
 #additional startup services
 echo "adding power profiles service"
 sudo systemctl enable power-profiles-daemon.service
