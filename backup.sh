@@ -13,4 +13,4 @@ git add .
 git commit -m "updated packages"
 git push origin main
 
-echo "Commited and pushed to remote..."
+echo "Done"
