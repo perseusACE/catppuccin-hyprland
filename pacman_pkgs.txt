@@ -16,6 +16,7 @@ hwinfo
 imagemagick
 inetutils
 kate
+kde-gtk-config
 kitty
 konsole
 kwalletmanager

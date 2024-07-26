@@ -1,4 +1,5 @@
 brave-bin
+catppuccin-gtk-theme-mocha
 cava
 oh-my-posh
 phinger-cursors
