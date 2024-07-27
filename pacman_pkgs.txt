@@ -1,3 +1,4 @@
+aircrack-ng
 arch-install-scripts
 ark
 base
@@ -6,11 +7,11 @@ bitwarden
 blueman
 bluez-utils
 dolphin
+dosfstools
 efibootmgr
 fastfetch
 git
 github-cli
-gparted
 grub
 hwinfo
 hyprland
@@ -28,6 +29,7 @@ lsb-release
 nano
 neofetch
 networkmanager
+ntfs-3g
 openssh
 papirus-icon-theme
 plasma-desktop

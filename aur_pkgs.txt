@@ -1,6 +1,7 @@
 brave-bin
 catppuccin-gtk-theme-mocha
 cava
+nomachine
 oh-my-posh
 phinger-cursors
 spotify
@@ -8,5 +9,6 @@ ttf-work-sans
 unetbootin
 vesktop
 visual-studio-code-bin
+vscodium-bin
 yay
 yay-debug
