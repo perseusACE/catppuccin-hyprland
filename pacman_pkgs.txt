@@ -10,8 +10,10 @@ dolphin
 dosfstools
 efibootmgr
 fastfetch
+feh
 git
 github-cli
+gparted
 grub
 hwinfo
 hyprland
@@ -38,6 +40,7 @@ plasma-pa
 plasma-systemmonitor
 power-profiles-daemon
 putty
+python-pywal
 sddm
 sddm-kcm
 sof-firmware
