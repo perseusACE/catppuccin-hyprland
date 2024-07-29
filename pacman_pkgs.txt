@@ -8,6 +8,7 @@ blueman
 bluez-utils
 dolphin
 dosfstools
+dunst
 efibootmgr
 fastfetch
 feh
@@ -34,6 +35,7 @@ networkmanager
 ntfs-3g
 openssh
 papirus-icon-theme
+pavucontrol
 plasma-desktop
 plasma-nm
 plasma-pa
@@ -48,4 +50,5 @@ starship
 timeshift
 ttf-space-mono-nerd
 ufw
+waybar
 xorg-xrandr
