@@ -1,14 +1,16 @@
 brave-bin
 catppuccin-gtk-theme-mocha
 cava
-nomachine
+hyprpicker-git
 oh-my-posh
 phinger-cursors
+spicetify-themes-git
 spotify
 ttf-work-sans
 unetbootin
 vesktop
 visual-studio-code-bin
 vscodium-bin
+wlogout
 yay
 yay-debug

@@ -18,6 +18,8 @@ gparted
 grub
 hwinfo
 hyprland
+hyprlock
+hyprpaper
 imagemagick
 inetutils
 kate
@@ -32,6 +34,7 @@ lsb-release
 nano
 neofetch
 networkmanager
+noto-fonts-cjk
 ntfs-3g
 openssh
 papirus-icon-theme
@@ -43,11 +46,15 @@ plasma-systemmonitor
 power-profiles-daemon
 putty
 python-pywal
+rofi-wayland
 sddm
 sddm-kcm
 sof-firmware
+spectacle
 starship
 timeshift
+ttf-font-awesome
+ttf-jetbrains-mono
 ttf-space-mono-nerd
 ufw
 waybar

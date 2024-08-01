@@ -1,0 +1,86 @@
+@define-color bg #000000;
+@define-color fg #ffffff;
+
+* {
+    /* `otf-font-awesome` is required to be installed for icons */
+    border: none;
+    border-radius: 0px;
+    font-family: Work Sans, FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    min-height: 21px;
+}
+
+window#waybar {
+    background: @bg;
+    border-radius: 0px;
+    padding: 0px;
+    margin-top: 0px;
+}
+
+tooltip {
+    background: @bg;
+    color: @fg;
+    border-radius: 0px;
+    border-width: 0px;
+}
+
+#workspaces button {
+    box-shadow: none;
+    text-shadow: none;
+    padding: 0px;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    margin-left: 2px;
+    margin-right: 2px;
+    transition-duration: 0.5s;
+    color: @fg;
+}
+
+#workspaces button:hover {
+    background: none;
+}
+
+#workspaces button.persistent {
+    color: @fg;
+}
+
+#workspaces button.active {
+    border-bottom: 2px solid;
+    color: @fg;
+    transition-duration: 0.5s;
+}
+
+.custom-spotify {
+    padding: 0 6px;
+    margin: 0 4px;
+    color: @fg;
+}
+
+#idle_inhibitor,
+#bluetooth,
+#network {
+    color: @fg;
+    padding: 0px 6px;
+}
+
+#cpu,
+#custom-memory,
+#temperature {
+    color: @fg;
+    padding: 0px 6px;
+}
+
+#custom-power,
+#clock,
+#pulseaudio,
+#battery {  
+    color: @fg;
+    padding: 0px 6px;
+}
+
+/* custom padding */
+#custom-padd {
+    padding-right: 4px;
+    padding-left: 4px;
+}

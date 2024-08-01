@@ -1,0 +1,195 @@
+
+{
+    // general config //
+    "layer": "bottom",
+    "position": "top",
+    "height": 32,
+    "exclusive": true,
+    "passthrough": false,
+    "gtk-layer-shell": true,
+    //"width": 1910,
+    "margin-top": 0,
+    "margin-left": 0,
+    "margin-right": 0,
+  
+    //Choose the order of the modules
+    "modules-left": [   
+        "custom/padd",
+        "temperature",
+	    "cpu",
+        "custom/memory",
+        "custom/padd",              
+        "custom/padd",
+        "custom/spotify", 
+        "custom/padd"   
+    ],
+    "modules-center": [
+        "custom/padd",
+        "clock#date",
+        "custom/padd"        
+    ],
+    "modules-right": [
+        "custom/padd",
+        "pulseaudio",
+        "pulseaudio#microphone",
+        "custom/separator",
+        "network",
+        "tray",
+        "custom/separator",
+        "battery",
+        "clock#time",
+        "custom/power"
+    ],
+    
+    // Modules configuration
+    "keyboard-state": {
+        "numlock": true,
+        "capslock": true,
+        "format": "{name} {icon}",
+        "format-icons": {
+            "locked": "",
+            "unlocked": ""
+        }
+    },
+
+    "custom/spotify": {
+        "exec": "/usr/bin/python3 ~/.config/scripts/mediaplayer.py --player spotify",
+        "format": "{} ",
+        "return-type": "json",
+        "on-click": "playerctl play-pause",
+        "on-scroll-up": "playerctl next",
+        "on-scroll-down": "playerctl previous"
+    },
+
+    "clock#time": {
+		"interval": 10,
+		"format": "{:%I:%M %p}",
+		"tooltip": false
+	},
+
+    "clock#date": { 
+        "locale": "en_US.UTF-8",
+        "interval": 20,
+        "format": "{:%e %b %Y}",
+        "tooltip": false
+    },
+
+    "cpu": {
+        "interval": 2,
+        "format": "  {usage}%",
+        "rotate": 0,
+        "on-click": "kitty --hold -e btop"
+    },
+
+    "custom/memory": {
+        "exec": "~/.config/scripts/memory.sh",
+        "interval": 2,
+        "format": "   {} MiB",
+        "tooltip": false
+    },
+
+    "temperature": {
+        "critical-threshold": 50,
+        "format": " {temperatureC}°C",
+        "tooltip": false
+    },
+
+    "backlight": {
+        "device": "intel_backlight",
+        "rotate": 0,
+        "format": "{icon}  {percent}%",
+        "format-icons": ["", "", "", "", "", "", "", "", " "],
+        "on-scroll-up": "brightnessctl set 1%+",
+        "on-scroll-down": "brightnessctl set 1%-",
+        "min-length": 6,
+        "scroll-step": 5
+    },
+
+    "battery": {
+        "states": {
+            "good": 95,
+            "warning": 30,  
+            "critical": 20
+        },
+
+        "format": "{icon}  {capacity}%",
+            "rotate": 0,
+            "format-charging": " {capacity}%",
+            "format-plugged": " {capacity}%",
+            //"format-alt": "{time} {icon}",
+            "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+    },
+
+    "bluetooth": {
+        "format": "󰂯",
+        "format-connected": "󰂱 connected",
+        "format-disabled": "󰂲",
+        "rotate": 0,
+        "on-click": "blueman-manager",
+        "tooltip-format": "{controller_alias}\n{num_connections} connected",
+        "tooltip-format-connected": "{controller_alias}\n{num_connections} connected\n\n{device_enumerate}",
+        "tooltip-format-enumerate-connected": "{device_alias}",
+        "tooltip-format-enumerate-connected-battery": "{device_alias}\t{icon} {device_battery_percentage}%"
+    },
+
+    "network": {
+        "tooltip": true,
+        "format-wifi": "󰖩 ",
+        "rotate": 0,
+        "format-ethernet": "󰈀 ",
+        "tooltip-format": "Network: <big><b>{essid}</b></big>\nSignal strength: <b>{signaldBm}dBm ({signalStrength}%)</b>\nFrequency: <b>{frequency}MHz</b>\nInterface: <b>{ifname}</b>\nIP: <b>{ipaddr}/{cidr}</b>\nGateway: <b>{gwaddr}</b>\nNetmask: <b>{netmask}</b>",
+        "format-linked": "󰈀 {ifname} (No IP)",
+        "format-disconnected": "󰖪 ",
+        "tooltip-format-disconnected": "Disconnected",
+        "format-alt": "<span foreground='#99ffdd'>   {bandwidthDownBytes}  </span> <span foreground='#ffcc66'>   {bandwidthUpBytes}</span>",
+        "interval": 2
+    },
+
+    "pulseaudio": {
+        "format": "{icon}  {volume}%",
+            "rotate": 0,
+            "format-muted": " ",
+                "format-icons": {
+                    "headphone": " ",
+                    "hands-free": " ",
+                    "headset": " ",
+                    "phone": " ",
+                    "portable": " ",
+                    "car": " ",
+                    "default": [" ", " ", " "]
+                },
+        "on-click": "pavucontrol"
+    },
+
+    "pulseaudio#microphone": {
+        "format": "{format_source}",
+        "rotate": 0,
+        "format-source": "",
+        "format-source-muted": " ",
+        "on-click": "pavucontrol -t 4"
+    },
+
+    "custom/power": {
+        "format": " ",
+        "rotate": 0,
+        "on-click": "~/.config/scripts/logout.sh",
+    },
+
+    "tray": {
+        "icon-size": 18,
+        "spacing": 10,
+        "show-passive-items": false
+    },
+
+    "custom/padd": {
+        "format": " ",
+        "interval" : "once",
+        "tooltip": false
+    },
+
+    "custom/separator": {
+        "format": "",
+        "interval" : "once",
+        "tooltip": false
+    }
+}
