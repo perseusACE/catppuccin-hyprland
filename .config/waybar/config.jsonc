@@ -26,6 +26,7 @@
     "modules-center": [
         "custom/padd",
         "clock#date",
+        "custom/weather",
         "custom/padd"        
     ],
     "modules-right": [
@@ -37,7 +38,7 @@
         "tray",
         "custom/separator",
         "battery",
-        "clock#time",
+        "clock#1",
         "custom/power"
     ],
     
@@ -61,9 +62,15 @@
         "on-scroll-down": "playerctl previous"
     },
 
-    "clock#time": {
+    "clock#1": {
 		"interval": 10,
 		"format": "{:%I:%M %p}",
+		"tooltip": false
+	},
+
+	"clock#2": {
+		"interval": 10,
+		"format": "{:%H:%M}",
 		"tooltip": false
 	},
 
@@ -173,6 +180,15 @@
         "format": " ",
         "rotate": 0,
         "on-click": "~/.config/scripts/logout.sh",
+    },
+
+    "custom/weather": {
+        "format": "{}",
+        "interval": 60,
+        "exec": "curl -s 'https://wttr.in/?format=1'",
+        //"return-type": "json",
+        //"exec": "~/.config/waybar/modules/weather.sh",
+        "exec-if": "ping wttr.in -c1"
     },
 
     "tray": {
