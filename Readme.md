@@ -44,7 +44,7 @@ ln -s ~/Repositories/arch_kde/.bashrc ~/.bashrc
 ln -s ~/Repositories/arch_kde/.config/scripts/memory.sh ~/.config/scripts/memory.sh
 ln -s ~/Repositories/arch_kde/.config/scripts/logout.sh ~/.config/scripts/logout.sh
 ln -s ~/Repositories/arch_kde/.config/scripts/rofi.sh ~/.config/scripts/rofi.sh
-ln -s ~/Repositories/arch_kde/.config/scripts/mediaplayer.pu ~/.config/scripts/mediaplayer.py
+ln -s ~/Repositories/arch_kde/.config/scripts/mediaplayer.py ~/.config/scripts/mediaplayer.py
 
 ```
 

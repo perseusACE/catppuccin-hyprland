@@ -16,6 +16,7 @@ git
 github-cli
 gparted
 grub
+gtk-engine-murrine
 hwinfo
 hyprland
 hyprlock
@@ -45,8 +46,10 @@ plasma-pa
 plasma-systemmonitor
 power-profiles-daemon
 putty
+python-pip
 python-pywal
 rofi-wayland
+samba
 sddm
 sddm-kcm
 sof-firmware

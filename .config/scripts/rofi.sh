@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-dir="$HOME/.config/rof"
+dir="$HOME/.config/rofi"
 
 ## Run rofi
 rofi -show drun \

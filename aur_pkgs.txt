@@ -1,6 +1,7 @@
 brave-bin
 catppuccin-gtk-theme-mocha
 cava
+flavours
 hyprpicker-git
 oh-my-posh
 phinger-cursors
@@ -12,5 +13,6 @@ vesktop
 visual-studio-code-bin
 vscodium-bin
 wlogout
+wpgtk
 yay
 yay-debug
