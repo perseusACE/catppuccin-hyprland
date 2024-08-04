@@ -33,14 +33,15 @@ case "$1" in
     #send_notification
     ;;
   mute)
-    pamixer --toggle-mute > /dev/null
+    pamixer -t > /dev/null
     #send_notification
     ;;
   micmute)
-    pamixer --source 54 --toggle-mute > /dev/null
+    id=$(pamixer --list-sources | grep 'input' | awk '{print $1}')
+    pamixer --source $id -t > /dev/null
     #send_notification
     ;;
   *)
-    echo "Usage: $0 {up|down|mute}"
+    echo "Usage: $0 {up|down|mute|micmute}"
     ;;
 esac
