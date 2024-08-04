@@ -16,11 +16,12 @@
     "modules-left": [   
         "custom/padd",
         "temperature",
-	    "cpu",
+        "cpu",
         "custom/memory",
+	"hyprland/workspaces",
         "custom/padd",              
         "custom/padd",
-        "custom/spotify", 
+        "custom/spotify",
         "custom/padd"   
     ],
     "modules-center": [
@@ -33,12 +34,11 @@
         "custom/padd",
         "pulseaudio",
         "pulseaudio#microphone",
-        "custom/separator",
         "network",
-        "tray",
-        "custom/separator",
+        "bluetooth",
         "battery",
-        "clock#1",
+        "clock",
+        "tray",
         "custom/power"
     ],
     
@@ -62,19 +62,19 @@
         "on-scroll-down": "playerctl previous"
     },
 
-    "clock#1": {
+    "clock": {
 		"interval": 10,
 		"format": "{:%I:%M %p}",
 		"tooltip": false
 	},
 
-	"clock#2": {
+	"clock#2":{
 		"interval": 10,
 		"format": "{:%H:%M}",
 		"tooltip": false
 	},
 
-    "clock#date": { 
+    "clock#date": {
         "locale": "en_US.UTF-8",
         "interval": 20,
         "format": "{:%e %b %Y}",
@@ -99,6 +99,27 @@
         "critical-threshold": 50,
         "format": " {temperatureC}°C",
         "tooltip": false
+    },
+
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "format-icons": {
+            "1": "1",
+            "2": "2",
+            "3": "3",
+            "4": "4",
+            "5": "5",
+            "6": "6",
+            "7": "7",
+            "8": "8",
+            "9": "9",
+        },
+        "persistent-workspaces": {
+            "1": [],
+            "2": [],
+            "3": [],
+            "4": [],
+        },
     },
 
     "backlight": {
@@ -173,13 +194,14 @@
         "rotate": 0,
         "format-source": "",
         "format-source-muted": " ",
-        "on-click": "pavucontrol -t 4"
+        "on-click": "~/.config/scripts/volume.sh micmute"
+        //"on-click": "pavucontrol -t 4"
     },
 
     "custom/power": {
         "format": " ",
         "rotate": 0,
-        "on-click": "~/.config/scripts/logout.sh",
+        "on-click": "~/.config/scripts/logout.sh"
     },
 
     "custom/weather": {
@@ -199,12 +221,6 @@
 
     "custom/padd": {
         "format": " ",
-        "interval" : "once",
-        "tooltip": false
-    },
-
-    "custom/separator": {
-        "format": "",
         "interval" : "once",
         "tooltip": false
     }

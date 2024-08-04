@@ -2,28 +2,22 @@
 * {
     /* `otf-font-awesome` is required to be installed for icons */
     font-family: "JetBrainsMono Nerd Font";
-    font-size: 10pt;
-    font-weight: 900;
+    font-size: 9pt;
+    font-weight: 700;
     transition-property: background-color;
     transition-duration: 0.5s;
-    padding:0px;
-    margin:0px;
+    padding: 0px;
+    margin: 0px;
 }
 
-/* Reset all styles */
 * {
     border: none;
     border-radius: 3px;
     min-height: 0;
-    margin: 0.2em 0.3em 0.2em 0.3em;
+    margin: 0.1em 0.2em 0.2em 0.2em;
 }
 
-/* The whole bar */
 #waybar {
-    background: transparent;
-    /* background-color: transparent;*/
-    /*color: @light;*/
-    color: #c8c8c8;
     transition-property: background-color;
     transition-duration: 0.5s;
     /*border-top: 8px transparent;*/
@@ -31,63 +25,48 @@
     margin: 0px 0px;
 }
 
-window#waybar.hidden {
-    opacity: 0.2;
+window#waybar {
+    background: rgba(0, 0, 0, 0.95);
+    border-bottom: 3px solid rgba(100, 114, 125, 0.95);
+}
+
+#workspaces {
+    background-color: #201E28;
 }
 
 #workspaces button {
-    padding: 0 0px;
-    color: #7984a4;
+    padding: 3px 0px 0px 0px;
     background-color: transparent;
-    /* Use box-shadow instead of border so the text isn't offset */
     box-shadow: inset 0 -3px transparent;
-    /* Avoid rounded borders under each workspace name */
-    border: none;
-    border-radius: 0;
+    border-radius: 8px;
 }
 
-#workspaces button.focused {
-    background-color: transparent;
+#workspaces button.empty {
+    color: #403c50;
 }
-#workspace button.hover {
-    background-color: transparent;
-}
+
 #workspaces button.active {
-    color: #fff;
+    color: #fb958b;
 }
 
-#workspaces button.urgent {
-    background-color: #eb4d4b;
-}
-
-#window {
-    /* border-radius: 20px; */
-    /* padding-left: 10px; */
-    /* padding-right: 10px; */
-    color: #64727d;
-
-}
-
-/* Each module */
 #clock,
+#clock#2,
+#clock#date,
 #battery,
 #cpu,
 #memory,
 #custom-memory,
-#disk,
 #temperature,
 #backlight,
 #network,
 #pulseaudio,
-#wireplumber,
-#custom-media,
-#custom-screenshot_t,
+#pulseaudio-microphone,
+#custom-spotify,
 #tray,
 #mode,
 #idle_inhibitor,
 #mpd,
 #bluetooth,
-#custom-hyprPicker,
 #custom-power,
 #custom-spotify,
 #custom-weather,
@@ -100,33 +79,35 @@ window#waybar.hidden {
 #custom-weather.rainyNight,
 #custom-weather.showyIcyDay,
 #custom-weather.snowyIcyNight,
-#custom-weather.default,
-#custom-rofi,
-#custom-notification {
-    padding: 0px 15px;
-    color: #e5e5e5;
-    /* color: #bf616a; */
-    border-radius: 5px;
-    background-color: #1e1e1e;
+#custom-weather.default {
+    min-width: 16px;
+    padding: 0px 10px;
 }
 
-
-
-#window,
 #workspaces {
-    border-radius: 20px;
+    border-radius: 8px;
     padding: 0px 10px;
-    background-color: #1e1e1e;
+    background-color: #201e28;
+}
+
+#temperature {
+    background-color: #FF5C8F;
+    color: #1C1B19;
+}
+
+#temperature.critical {
+    background-color: #eb4d4b;
 }
 
 #cpu {
     color: #fb958b;
-    background-color: #1e1e1e;
+    background-color: #201e28;
 }
 
-#memory {
-    color: #ebcb8b;
-    background-color: #1e1e1e;
+#memory,
+#custom-memory {
+    color: #fb958b;
+    background-color: #201e28;
 }
 
 #custom-power {
@@ -134,11 +115,12 @@ window#waybar.hidden {
     color:#1c1b19;
 }
 
-#custom-rofi {
-    background-color: #1b242b;
-    /* color: #6a92d7;*/
-    color:#2f88ff;
-    font-size: 15px;
+#custom-weather {
+    background-color: #201e28;
+}
+
+#custom-weather.default {
+    color: #000000;
 }
 
 #custom-weather.severe {
@@ -168,41 +150,38 @@ window#waybar.hidden {
     color: #d6e7e5;
 }
 
-#custom-weather.default {
-    color: #dbd9d8;
-}
-
-/* If workspaces is the leftmost module, omit left margin */
+/* If hyprland-workspaces is the leftmost module, omit left margin */
 .modules-left > widget:first-child > #workspaces {
     margin-left: 0;
 }
 
-/* If workspaces is the rightmost module, omit right margin */
+/* If hyprland-workspaces is the rightmost module, omit right margin */
 .modules-right > widget:last-child > #workspaces {
     margin-right: 0;
 }
 
-#pulseaudio {
-    color: #7d9bba;
+#pulseaudio,
+#pulseaudio#microphone {
+    color: #ffffff;
+    background-color: #2C78BF;
 }
 
 #backlight {
-    /* color: #EBCB8B; */
     color: #1c1b19;
-    /*background-color: #8fbcbb*/
     background-color: #2C78BF
 }
 
-#clock {
-    color: #c8d2e0;
-    /* background-color: #14141e; */
+#tray,
+#clock,
+#clock#2,
+#clock#date {
+    color: #ffffff;
+    background-color: #201e28;
 }
 
 #battery {
-    /*color: #c0caf5;*/
     background-color:#98BC37;
     color:#1c1b19;
-    /* background-color: #90b1b1; */
 }
 
 #battery.charging,
@@ -234,20 +213,16 @@ label:focus {
     background-color: #000000;
 }
 
-#disk {
-    background-color: #964b00;
-}
-
 #bluetooth {
-    color: #707d9d;
+    background-color: #0AAEB3;
+    color:#1c1b19;
 }
 
 #bluetooth.disconnected {
-    color: #f53c3c;
+    color: #ffffff;
 }
 
 #network {
-    /* color: #b48ead; */
     background-color: #0AAEB3;
     color:#1c1b19;
 }
@@ -257,7 +232,7 @@ label:focus {
     color:#1c1b19;
 }
 
-#custom-media {
+#custom-spotify {
     background-color: #66cc99;
     color: #2a5c45;
     min-width: 100px;
@@ -269,16 +244,6 @@ label:focus {
 
 #custom-media.custom-vlc {
     background-color: #ffa000;
-}
-
-#temperature {
-    /*background-color: #f0932b;*/
-    background-color: #FF5C8F;
-    color:#1c1b19;
-}
-
-#temperature.critical {
-    background-color: #eb4d4b;
 }
 
 #tray > .passive {
@@ -299,14 +264,6 @@ label:focus {
     color: #2d3436;
 }
 
-#language {
-    background: #00b093;
-    color: #740864;
-    padding: 0 0px;
-    margin: 0 5px;
-    min-width: 16px;
-}
-
 #keyboard-state {
     background: #97e1ad;
     color: #000000;
@@ -321,22 +278,4 @@ label:focus {
 
 #keyboard-state > label.locked {
     background: rgba(0, 0, 0, 0.2);
-}
-
-#wireplumber{
-    background-color: #FEB95F;
-    color: #1c1b19;
-}
-
-#custom-screenshot_t{
-    background-color: #FED06E;
-    color: #1c1b19;
-}
-
-window#waybar .horizontal{
-    padding:1px;
-}
-
-window#waybar {
-    border-radius:8px;
 }
