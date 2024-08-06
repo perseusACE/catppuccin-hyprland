@@ -9,6 +9,7 @@ alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 PS1='[\u@\h \W]\$ '
 
+(cat ~/.cache/wal/sequences &)
+source ~/.cache/wal/colors-tty.sh
+
 eval "$(starship init bash)"
-#eval "$(oh-my-posh init bash)"
-#eval "$(oh-my-posh init bash --config ~/.mytheme.omp.json)"

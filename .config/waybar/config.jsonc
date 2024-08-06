@@ -33,7 +33,6 @@
     "modules-right": [
         "custom/padd",
         "pulseaudio",
-        "pulseaudio#microphone",
         "network",
         "bluetooth",
         "battery",
