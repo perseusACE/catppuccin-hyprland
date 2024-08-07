@@ -55,6 +55,14 @@ yay -S ttf-space-mono-nerd
 yay -S ttf-jetbrains-mono
 ```
 
+## Chromium theme pywal:
+1. Run script ```./generate-theme.sh```
+2. Open chromium
+3. Go to ```chrome://extensions```
+4. Turn on "Developer Mode" in the top right corner
+5. Press "Load unpacked"
+6. Select "Pywal" (by default) in the same folder with the script
+
 ## Colors:
 Catppuccin Mocha Lavender (optional)
 
