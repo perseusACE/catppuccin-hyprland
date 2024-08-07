@@ -1,9 +1,31 @@
+@define-color background #000000;
+@define-color foreground #ddc1ae;
+@define-color color0 #000000;
+@define-color color1 #5C3226;
+@define-color color2 #624537;
+@define-color color3 #655B4F;
+@define-color color4 #7A7E7C;
+@define-color color5 #A05941;
+@define-color color6 #9C6A52;
+@define-color color7 #ddc1ae;
+@define-color color8 #9a8779;
+@define-color color9 #5C3226;
+@define-color color10 #624537;
+@define-color color11 #655B4F;
+@define-color color12 #7A7E7C;
+@define-color color13 #A05941;
+@define-color color14 #9C6A52;
+@define-color color15 #ddc1ae;
+@define-color color16 #F08E61;
+@define-color color17 #F39A6E;
+@define-color color18 #D4AF6F;
+@define-color color19 #FD1A12;
 
 * {
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family: "JetBrainsMono Nerd Font";
+    font-family: "SpaceMono Nerd Font";
     font-size: 9pt;
-    font-weight: 700;
+    font-weight: 600;
     transition-property: background-color;
     transition-duration: 0.5s;
     padding: 0px;
@@ -14,7 +36,7 @@
     border: none;
     border-radius: 3px;
     min-height: 0;
-    margin: 0.1em 0.2em 0.2em 0.2em;
+    margin: 0.2em 0.2em 0.2em 0.2em;
 }
 
 #waybar {
@@ -26,27 +48,29 @@
 }
 
 window#waybar {
-    background: rgba(0, 0, 0, 0.95);
-    border-bottom: 3px solid rgba(100, 114, 125, 0.95);
+    background: transparent;
+    /*border-bottom: 0.1em solid @color19;*/
 }
 
 #workspaces {
-    background-color: #201E28;
+    padding: 0px 5px;
+    background-color: @background;
+    border: 0.1em solid @color19;
 }
 
 #workspaces button {
-    padding: 3px 0px 0px 0px;
+    color: @foreground;
+    padding: 0px 0px;
     background-color: transparent;
     box-shadow: inset 0 -3px transparent;
-    border-radius: 8px;
 }
 
 #workspaces button.empty {
-    color: #403c50;
+    color: @color4;
 }
 
 #workspaces button.active {
-    color: #fb958b;
+    color: @color19;
 }
 
 #clock,
@@ -80,74 +104,70 @@ window#waybar {
 #custom-weather.showyIcyDay,
 #custom-weather.snowyIcyNight,
 #custom-weather.default {
-    min-width: 16px;
-    padding: 0px 10px;
-}
-
-#workspaces {
-    border-radius: 8px;
-    padding: 0px 10px;
-    background-color: #201e28;
+    min-width: 20px;
+    padding: 0px 6px;
+    border: 0.1em solid @color19;
 }
 
 #temperature {
-    background-color: #FF5C8F;
-    color: #1C1B19;
+    background-color: @color19;
+    color: @background;
 }
 
 #temperature.critical {
-    background-color: #eb4d4b;
+    background-color: @color19;
 }
 
 #cpu {
-    color: #fb958b;
-    background-color: #201e28;
+    color: @color19;
+    background-color: @background;
 }
 
 #memory,
 #custom-memory {
-    color: #fb958b;
-    background-color: #201e28;
+    color: @color19;
+    background-color: @background;
 }
 
 #custom-power {
-    background-color: #F75341;
-    color:#1c1b19;
+    background-color: @color19;
+    color: @background;
 }
 
 #custom-weather {
-    background-color: #201e28;
+    background-color: @background;
+    color: @color19
 }
 
 #custom-weather.default {
-    color: #000000;
+    color: @color19;
 }
 
 #custom-weather.severe {
-    color: #eb937d;
+    color: @color5;
 }
 
 #custom-weather.sunnyDay {
-    color: #c2ca76;
+    color: @color7;
 }
 
 #custom-weather.clearNight {
-    color: #cad3f5;
+    color: @color2;
 }
 
 #custom-weather.cloudyFoggyDay,
 #custom-weather.cloudyFoggyNight {
-    color: #c2ddda;
+    color: @color3;
 }
 
 #custom-weather.rainyDay,
 #custom-weather.rainyNight {
-    color: #5aaca5;
+    color: @color4;
 }
 
 #custom-weather.showyIcyDay,
 #custom-weather.snowyIcyNight {
-    color: #d6e7e5;
+    color: @foreground;
 }
 
 /* If hyprland-workspaces is the leftmost module, omit left margin */
@@ -162,8 +182,8 @@ window#waybar {
 
 #pulseaudio,
 #pulseaudio#microphone {
-    color: #ffffff;
-    background-color: #2C78BF;
+    color: @color19;
+    background-color: @background;
 }
 
 #backlight {
@@ -175,20 +195,20 @@ window#waybar {
 #clock,
 #clock#2,
 #clock#date {
-    color: #ffffff;
-    background-color: #201e28;
+    color: @color19;
+    background-color: @background;
 }
 
 #battery {
-    background-color:#98BC37;
-    color:#1c1b19;
+    background-color: @background;
+    color: @color19;
 }
 
 #battery.charging,
 #battery.full,
 #battery.plugged {
-    color: #1c1b19;
-    background-color: #519F50;
+    color: @color19;
+    background-color: @background;
 }
 
 @keyframes blink {
@@ -214,17 +234,17 @@ label:focus {
 }
 
 #bluetooth {
-    background-color: #0AAEB3;
-    color:#1c1b19;
+    background-color: @background;
+    color: @color19;
 }
 
 #bluetooth.disconnected {
-    color: #ffffff;
+    color: @color15;
 }
 
 #network {
-    background-color: #0AAEB3;
-    color:#1c1b19;
+    background-color: @background;
+    color: @color19;
 }
 
 #network.disconnected {
@@ -233,8 +253,8 @@ label:focus {
 }
 
 #custom-spotify {
-    background-color: #66cc99;
-    color: #2a5c45;
+    background-color: @color19;
+    color: @background;
     min-width: 100px;
 }
 
