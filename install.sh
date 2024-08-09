@@ -31,7 +31,9 @@ echo "adding timeshift service"
 sudo systemctl enable --now cronie
 
 #sym links for dotfiles
-
+ln -s ~/Repositories/arch_kde/.config/hypr/hyprland.conf ~/.config/hypr/hyprland.conf
+ln -s ~/Repositories/arch_kde/.config/hypr/hyprpicker.conf ~/.config/hypr/hyprpicker.conf
+ln -s ~/Repositories/arch_kde/.config/hypr/hyprpaper.conf ~/.config/hypr/hyprpaper.conf
 
 ln -s ~/Repositories/arch_kde/.config/neofetch/config.conf ~/.config/neofetch/config.conf
 
