@@ -1,31 +1,13 @@
-@define-color background #000000;
-@define-color foreground #ddc1ae;
-@define-color color0 #000000;
-@define-color color1 #5C3226;
-@define-color color2 #624537;
-@define-color color3 #655B4F;
-@define-color color4 #7A7E7C;
-@define-color color5 #A05941;
-@define-color color6 #9C6A52;
-@define-color color7 #ddc1ae;
-@define-color color8 #9a8779;
-@define-color color9 #5C3226;
-@define-color color10 #624537;
-@define-color color11 #655B4F;
-@define-color color12 #7A7E7C;
-@define-color color13 #A05941;
-@define-color color14 #9C6A52;
-@define-color color15 #ddc1ae;
-@define-color color16 #F08E61;
-@define-color color17 #F39A6E;
-@define-color color18 #D4AF6F;
-@define-color color19 #FD1A12;
+@import "mocha.css";
+
+@define-color background #2E3440;
+
 
 * {
     /* `otf-font-awesome` is required to be installed for icons */
     font-family: "SpaceMono Nerd Font";
     font-size: 9pt;
-    font-weight: 600;
+    font-weight: 700;
     transition-property: background-color;
     transition-duration: 0.5s;
     padding: 0px;
@@ -35,42 +17,47 @@
 * {
     border: none;
     border-radius: 3px;
-    min-height: 0;
-    margin: 0.2em 0.2em 0.2em 0.2em;
+    margin: 0.15em 0.2em 0.2em 0.2em;
 }
 
 #waybar {
     transition-property: background-color;
     transition-duration: 0.5s;
-    /*border-top: 8px transparent;*/
     border-radius: 0px;
     margin: 0px 0px;
 }
 
 window#waybar {
-    background: transparent;
-    /*border-bottom: 0.1em solid @color19;*/
+    background-color: alpha(@base, 0.9);
+    border-bottom: 2px solid alpha(@blue, 0.9);
+    border-radius: 8px;
 }
 
 #workspaces {
-    padding: 0px 5px;
-    background-color: @background;
-    border: 0.1em solid @color19;
+    background-color: @surface0;
+    min-width: 20px;
+    padding: 0px 6px;
+    border-radius: 6px;
+    /*
+    border: 0.1em solid @mauve;
+    */
 }
 
 #workspaces button {
-    color: @foreground;
+    color: @overlay2;
     padding: 0px 0px;
     background-color: transparent;
+    /*
     box-shadow: inset 0 -3px transparent;
+    */
 }
 
 #workspaces button.empty {
-    color: @color4;
+    color: @surface2;
 }
 
 #workspaces button.active {
-    color: @color19;
+    color: @text;
 }
 
 #clock,
@@ -105,69 +92,77 @@ window#waybar {
 #custom-weather.snowyIcyNight,
 #custom-weather.default {
     min-width: 20px;
-    padding: 0px 6px;
-    border: 0.1em solid @color19;
+    padding: 0px 8px;
+    margin-left: 3px;
+    margin-right: 3px;
+    border-radius: 6px;
+    /*
+    border: 0.1em solid;
+    */
+}
+
+#tray {
+    border: none;   
 }
 
 #temperature {
-    background-color: @color19;
-    color: @background;
+    background-color: alpha(@blue, 0.3);
+    color: @sapphire;
 }
 
 #temperature.critical {
-    background-color: @color19;
+    color: @red;
 }
 
 #cpu {
-    color: @color19;
-    background-color: @background;
+    color: @peach;
+    background-color: alpha(@peach, 0.2);
 }
 
 #memory,
 #custom-memory {
-    color: @color19;
-    background-color: @background;
+    color: @green;
+    background-color: alpha(@green, 0.2);
 }
 
 #custom-power {
-    background-color: @color19;
-    color: @background;
+    background-color: alpha(@red, 0.2);
+    color: @red;
 }
 
 #custom-weather {
-    background-color: @background;
-    color: @color19
+    background-color: @surface0;
 }
 
 #custom-weather.default {
-    color: @color19;
+    color: @subtext;
 }
 
 #custom-weather.severe {
-    color: @color5;
+    color: @surface0;
 }
 
 #custom-weather.sunnyDay {
-    color: @color7;
+    color: @yellow;
 }
 
 #custom-weather.clearNight {
-    color: @color2;
+    color: @overlay2;
 }
 
 #custom-weather.cloudyFoggyDay,
 #custom-weather.cloudyFoggyNight {
-    color: @color3;
+    color: @surface2;
 }
 
 #custom-weather.rainyDay,
 #custom-weather.rainyNight {
-    color: @color4;
+    color: @surface1;
 }
 
 #custom-weather.showyIcyDay,
 #custom-weather.snowyIcyNight {
-    color: @foreground;
+    color: @text;
 }
 
 /* If hyprland-workspaces is the leftmost module, omit left margin */
@@ -182,46 +177,45 @@ window#waybar {
 
 #pulseaudio,
 #pulseaudio#microphone {
-    color: @color19;
-    background-color: @background;
+    color: @mauve;
+    background-color: @surface0;
 }
 
 #backlight {
-    color: #1c1b19;
-    background-color: #2C78BF
+    color: @mantle;
+    background-color: @sapphire;
 }
 
 #tray,
 #clock,
 #clock#2,
 #clock#date {
-    color: @color19;
-    background-color: @background;
+    color: @subtext;
+    background-color: @surface0;
 }
 
 #battery {
-    background-color: @background;
-    color: @color19;
+    background-color: alpha(@peach, 0.2);
+    color: @peach;
 }
 
 #battery.charging,
 #battery.full,
 #battery.plugged {
-    color: @color19;
-    background-color: @background;
+    color: @green;
+    background-color: alpha(@green, 0.2);
 }
 
 @keyframes blink {
     to {
-        background-color: rgba(30, 34, 42, 0.5);
-        color: #abb2bf;
+        background-color: alpha(@mantle, 0.5);
+        color: @subtext1;
     }
 }
 
 #battery.critical:not(.charging) {
-    /*color: #f53c3c; */
-    background-color: #f53c3c;
-    color:#1c1b19;
+    background-color: @red;
+    color: @crust;
     animation-name: blink;
     animation-duration: 0.5s;
     animation-timing-function: linear;
@@ -229,41 +223,38 @@ window#waybar {
     animation-direction: alternate;
 }
 
-label:focus {
-    background-color: #000000;
-}
-
 #bluetooth {
-    background-color: @background;
-    color: @color19;
+    background-color: alpha(@blue, 0.3);
+    color: @sapphire;
 }
 
 #bluetooth.disconnected {
-    color: @color15;
+    background-color: alpha(@blue, 0.3);
+    color: @sapphire;
 }
 
 #network {
-    background-color: @background;
-    color: @color19;
+    background-color: alpha(@blue, 0.3);
+    color: @sapphire;
 }
 
 #network.disconnected {
-    background-color: #f53c3c;
-    color:#1c1b19;
+    background-color: alpha(@blue, 0.3);
+    color: @sapphire;
 }
 
 #custom-spotify {
-    background-color: @color19;
-    color: @background;
-    min-width: 100px;
+    background-color: alpha(@green, 0.2);
+    color: @green;
+    padding: 0px 12px;
 }
 
 #custom-media.custom-spotify {
-    background-color: #66cc99;
+    background-color: @green;
 }
 
 #custom-media.custom-vlc {
-    background-color: #ffa000;
+    background-color: @yellow;
 }
 
 #tray > .passive {
@@ -272,21 +263,21 @@ label:focus {
 
 #tray > .needs-attention {
     -gtk-icon-effect: highlight;
-    background-color: #eb4d4b;
+    background-color: @red;
 }
 
 #idle_inhibitor {
-    background-color: #2d3436;
+    background-color: @surface0;
 }
 
 #idle_inhibitor.activated {
-    background-color: #ecf0f1;
-    color: #2d3436;
+    background-color: @text;
+    color: @surface0;
 }
 
 #keyboard-state {
-    background: #97e1ad;
-    color: #000000;
+    background: @green;
+    color: @crust;
     padding: 0 0px;
     margin: 0 5px;
     min-width: 16px;

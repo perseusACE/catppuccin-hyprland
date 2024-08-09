@@ -3,7 +3,7 @@
     // general config //
     "layer": "bottom",
     "position": "top",
-    "height": 32,
+    "height": 30,
     "exclusive": true,
     "passthrough": false,
     "gtk-layer-shell": true,
@@ -18,7 +18,7 @@
         "temperature",
         "cpu",
         "custom/memory",
-	"hyprland/workspaces",
+	    "hyprland/workspaces",
         "custom/padd",              
         "custom/padd",
         "custom/spotify",
@@ -76,12 +76,12 @@
     "clock#date": {
         "locale": "en_US.UTF-8",
         "interval": 20,
-        "format": "{:%e %b %Y}",
+        "format": "{:%a, %d %b %Y}",
         "tooltip": false
     },
 
     "cpu": {
-        "interval": 2,
+        "interval": 3,
         "format": "  {usage}%",
         "rotate": 0,
         "on-click": "kitty --hold -e btop"
@@ -89,13 +89,14 @@
 
     "custom/memory": {
         "exec": "~/.config/scripts/memory.sh",
-        "interval": 2,
-        "format": "   {} MiB",
+        "interval": 3,
+        "format": "  {} MiB",
         "tooltip": false
     },
 
     "temperature": {
-        "critical-threshold": 50,
+        "interval": 3,
+        "critical-threshold": 70,
         "format": " {temperatureC}°C",
         "tooltip": false
     },
@@ -133,12 +134,13 @@
     },
 
     "battery": {
+        "interval": 2,
+        "design-capacity": false,
         "states": {
             "good": 95,
             "warning": 30,  
             "critical": 20
         },
-
         "format": "{icon}  {capacity}%",
             "rotate": 0,
             "format-charging": " {capacity}%",
@@ -198,6 +200,7 @@
     },
 
     "custom/power": {
+        "tooltip": false,
         "format": " ",
         "rotate": 0,
         "on-click": "~/.config/scripts/logout.sh"
@@ -209,7 +212,8 @@
         "exec": "curl -s 'https://wttr.in/?format=1'",
         //"return-type": "json",
         //"exec": "~/.config/waybar/modules/weather.sh",
-        "exec-if": "ping wttr.in -c1"
+        "exec-if": "ping wttr.in -c1",
+        "tooltip": false
     },
 
     "tray": {

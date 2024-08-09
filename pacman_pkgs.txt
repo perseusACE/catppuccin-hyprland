@@ -7,6 +7,7 @@ bitwarden
 blueman
 bluez-utils
 brightnessctl
+btop
 dmidecode
 dolphin
 dosfstools
@@ -67,6 +68,8 @@ sof-firmware
 spectacle
 starship
 timeshift
+ttf-3270-nerd
+ttf-cascadia-code-nerd
 ttf-font-awesome
 ttf-jetbrains-mono
 ttf-space-mono-nerd
