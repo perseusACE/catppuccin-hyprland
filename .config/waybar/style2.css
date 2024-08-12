@@ -85,11 +85,11 @@ window#waybar {
 #custom-weather.cloudyFoggyNight,
 #custom-weather.rainyDay,
 #custom-weather.rainyNight,
-#custom-weather.showyIcyDay,
+#custom-weather.snowyIcyDay,
 #custom-weather.snowyIcyNight,
 #custom-weather.default {
     min-width: 20px;
-    padding: 0px 8px;
+    padding: 0px 6px;
     margin-left: 3px;
     margin-right: 3px;
     border-radius: 6px;
@@ -158,7 +158,7 @@ window#waybar {
     color: @surface1;
 }
 
-#custom-weather.showyIcyDay,
+#custom-weather.snowyIcyDay,
 #custom-weather.snowyIcyNight {
     color: @text;
 }
