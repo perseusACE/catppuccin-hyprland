@@ -75,7 +75,7 @@
 
     "clock#date": {
         "locale": "en_US.UTF-8",
-        "interval": 20,
+        "interval": 60,
         "format": "{:%a, %d %b %Y}",
         "tooltip": false
     },
@@ -134,10 +134,10 @@
     },
 
     "battery": {
-        "interval": 2,
+        "interval": 3,
         "design-capacity": false,
         "states": {
-            "good": 95,
+            "good": 90,
             "warning": 30,  
             "critical": 20
         },
@@ -151,9 +151,10 @@
 
     "bluetooth": {
         "format": "󰂯",
-        "format-connected": "󰂱 connected",
+        "format-connected": "󰂱",
         "format-disabled": "󰂲",
         "rotate": 0,
+        "tooltip-format-disabled": "Disabled",
         "on-click": "blueman-manager",
         "tooltip-format": "{controller_alias}\n{num_connections} connected",
         "tooltip-format-connected": "{controller_alias}\n{num_connections} connected\n\n{device_enumerate}",

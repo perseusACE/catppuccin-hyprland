@@ -18,6 +18,7 @@ fd
 feh
 ffmpegthumbnailer
 fzf
+gimp
 git
 github-cli
 gparted
@@ -64,6 +65,7 @@ rofi-wayland
 samba
 sddm
 sddm-kcm
+shotcut
 sof-firmware
 spectacle
 starship

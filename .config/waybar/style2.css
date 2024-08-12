@@ -1,8 +1,5 @@
 @import "mocha.css";
 
-@define-color background #2E3440;
-
-
 * {
     /* `otf-font-awesome` is required to be installed for icons */
     font-family: "SpaceMono Nerd Font";
@@ -102,7 +99,7 @@ window#waybar {
 }
 
 #tray {
-    border: none;   
+    border: none;
 }
 
 #temperature {
@@ -131,11 +128,12 @@ window#waybar {
 }
 
 #custom-weather {
+    color: @text;
     background-color: @surface0;
 }
 
 #custom-weather.default {
-    color: @subtext;
+    color: @text;
 }
 
 #custom-weather.severe {
@@ -181,6 +179,12 @@ window#waybar {
     background-color: @surface0;
 }
 
+#pulseaudio.muted,
+#pulseaudio#microphone.muted {
+    color: @text;
+    background-color: @surface0;
+}
+
 #backlight {
     color: @mantle;
     background-color: @sapphire;
@@ -190,7 +194,7 @@ window#waybar {
 #clock,
 #clock#2,
 #clock#date {
-    color: @subtext;
+    color: @text;
     background-color: @surface0;
 }
 
@@ -228,9 +232,9 @@ window#waybar {
     color: @sapphire;
 }
 
-#bluetooth.disconnected {
-    background-color: alpha(@blue, 0.3);
-    color: @sapphire;
+#bluetooth.disabled {
+    color: @text;
+    background-color: @surface0;
 }
 
 #network {
@@ -239,8 +243,8 @@ window#waybar {
 }
 
 #network.disconnected {
-    background-color: alpha(@blue, 0.3);
-    color: @sapphire;
+    color: @text;
+    background-color: @surface0;
 }
 
 #custom-spotify {
